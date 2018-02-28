@@ -1,0 +1,44 @@
+#----------------------------------------------------
+# ローテーション対象ログ
+# usage   : <対象ログ>,<処理方法>
+# 処理方法: cp or mv
+#----------------------------------------------------
+## システムログ
+/var/log/messages,cp
+/var/log/cron,cp
+/var/log/secure,cp
+/var/log/spooler,cp
+/var/log/zabbix/zabbix_agentd.log*,cp
+/var/log/zabbix/zabbix_zabbix_server.log*,cp
+/var/log/inf/shell.log,cp
+## apacheログ
+/etc/httpd/logs/access_log*,cp
+/etc/httpd/logs/error_log*,cp
+/etc/httpd/logs/ssl_access_log*,cp
+/etc/httpd/logs/ssl_error_log*,cp
+/etc/httpd/logs/ssl_request_log*,cp
+## cloudwatchメトリクスログ(一部)
+/var/log/inf/cloudwatch/EBS/serverName/BurstBalance.csv,cp
+/var/log/inf/cloudwatch/EBS/serverName/VolumeIdleTime.csv,cp
+/var/log/inf/cloudwatch/EBS/serverName/VolumeQueueLength.csv,cp
+/var/log/inf/cloudwatch/EBS/serverName/VolumeReadBytes.csv,cp
+/var/log/inf/cloudwatch/EBS/serverName/VolumeReadOps.csv,cp
+/var/log/inf/cloudwatch/EBS/serverName/VolumeTotalReadTime.csv,cp
+/var/log/inf/cloudwatch/EBS/serverName/VolumeTotalWriteTime.csv,cp
+/var/log/inf/cloudwatch/EBS/serverName/VolumeWriteBytes.csv,cp
+/var/log/inf/cloudwatch/EBS/serverName/VolumeWriteOps.csv,cp
+/var/log/inf/cloudwatch/EBS//VolumeWriteOps.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/CPUCreditBalance.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/CPUCreditUsage.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/CPUUtilization.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/DiskReadBytes.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/DiskReadOps.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/DiskWriteBytes.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/DiskWriteOps.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/NetworkIn.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/NetworkOut.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/NetworkPacketsIn.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/NetworkPacketsOut.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/StatusCheckFailed.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/StatusCheckFailed_Instance.csv,cp
+/var/log/inf/cloudwatch/EC2/serverName/StatusCheckFailed_System.csv,cp
